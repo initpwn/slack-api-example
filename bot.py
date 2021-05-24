@@ -24,7 +24,7 @@ class Resp:
 
         text = gen.paragraph()
 
-        return {"type": "section", "text": {"type": "mrkdwn", "text": text}},
+        return {"type": "section", "text": {"type": "plain_text", "text": text}},
 
     def generate_payload(self):
 
