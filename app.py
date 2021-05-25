@@ -6,12 +6,12 @@ from slackeventsapi import SlackEventAdapter
 from bot import Resp
 
 app = Flask(__name__)
-
-slack_events_adapter = SlackEventAdapter("474ecafa4c7785cff692e822ad364331", "/slack/events", app)
+#Well, keys can be fetched from older commits, it's revoked tho. I'm too lazy to rebase. 
+slack_events_adapter = SlackEventAdapter("<THERE WAS AN EVENT TOKEN... BUT IT WAS REVOKED :D>", "/slack/events", app)
 
 BoS = ['say something bot','hey bot, say something','hey bot say something']
 
-slack_web_client = WebClient(token='xoxb-229090703222-2109477858689-s5rfjwJyckfzybBJVaY5Eju4')
+slack_web_client = WebClient(token='<HERE GOES YOUR SLACK API KEY>')
 
 def generate_response(channel):
     resp_gen = Resp(channel)
